@@ -5,3 +5,8 @@
   box-sizing: border-box;
   margin: 25px;
 }
+
+#form_card{
+  display: flex;
+  flex-wrap: wrap;
+}
