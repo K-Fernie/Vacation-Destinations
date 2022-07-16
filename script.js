@@ -19,6 +19,13 @@ addBtn.addEventListener('click', e => {
 
   var newDiv = document.createElement('div');
   newDiv.setAttribute('class', 'card-body');
+  var newBtn1 = document.createElement('button');
+  newBtn1.setAttribute('class', 'btn btn-primary');
+  newBtn1.innerText = 'Edit';
+  var newBtn2 = document.createElement('button');
+  newBtn2.setAttribute('class', 'btn btn-primary');
+  newBtn2.innerText = 'Remove';
+  
   newDiv.innerHTML = `
   <img src="${photoVal}" class='card-img-top' alt ="vacation photo"/>
   <div class='card-body'>
@@ -26,6 +33,8 @@ addBtn.addEventListener('click', e => {
     <h5 class='card-title>${locValue}</h5>
     <p class='card-text'>${descValue}</p>
   `;
+  newDiv.appendChild(newBtn1);
+  newDiv.appendChild(newBtn2);
 
   document.querySelector('form').reset();
   cardContainer.appendChild(newDiv);
