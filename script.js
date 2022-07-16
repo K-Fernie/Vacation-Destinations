@@ -1,11 +1,12 @@
 'use strict';
-
+//to refactor you need to get the entire form and do an onsubmit event
 //variables to get the elements on the page
 const destName = document.getElementById('dest-name');
 const locale = document.getElementById('location');
 const photo = document.getElementById('photo');
 const description = document.getElementById('description');
 const cardContainer = document.getElementById('card-container');
+const myForm = document.getElementById('destination-form');
 const addBtn = document.getElementById('addBtn');
 const defaultImage =
   'https://s3.amazonaws.com/ae-lane-report/wp-content/uploads/2020/04/21121102/GettyImages-1160947136-1.jpg';
@@ -13,7 +14,7 @@ const defaultImage =
 //create function for edit
 //create function for remove
 
-addBtn.addEventListener('click', e => {
+ myForm.addEventListener('submit', e => {
   e.preventDefault();
   const dNValue = destName.value;
   const locValue = locale.value;
