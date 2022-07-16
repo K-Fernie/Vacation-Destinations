@@ -13,10 +13,39 @@
     <link rel="stylesheet" href="./style.css" />
     <title>Vacation Destinations Wishlist</title>
   </head>
-  <header>
+  <header class="container-fluid p-5 bg-primary text-white text-center">
     <h1>Vacation Destinations Wishlist</h1>
+    <h3>
+      Found exciting places to visit on your next vacation?<br />Use the form
+      below to add them to your wishlist.
+    </h3>
   </header>
   <body>
+    <form>
+      <p>Destination Name</p>
+      <input
+        id="dest-name"
+        type="text"
+        placeholder="Enter the name of the destination"
+      />
+      <p>Location</p>
+      <input id="location" type="text" placeholder="Where is it located?" />
+      <p>Photo</p>
+      <input
+        id="photo"
+        type="text"
+        placeholder="Enter an image url of the place"
+      />
+      <p>Description</p>
+      <input id="description" type="text" placeholder="Where is it located?" />
+      <button id="addBtn">Add to List</button>
+    </form>
+    <section id="card-section">
+      <div id="card-title">
+        <h3>Enter Destination details</h3>
+      </div>
+      <div id="card-container"></div>
+    </section>
     <script src="./script.js"></script>
   </body>
 </html>
