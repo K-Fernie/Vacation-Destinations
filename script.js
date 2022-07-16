@@ -10,6 +10,9 @@ const addBtn = document.getElementById('addBtn');
 const defaultImage =
   'https://s3.amazonaws.com/ae-lane-report/wp-content/uploads/2020/04/21121102/GettyImages-1160947136-1.jpg';
 //create functions for card creation
+//create function for edit
+//create function for remove
+
 addBtn.addEventListener('click', e => {
   e.preventDefault();
   const dNValue = destName.value;
