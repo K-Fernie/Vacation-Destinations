@@ -1,11 +1,11 @@
 * {
   box-sizing: border-box;
-  margin: 25px;
 }
 
 #form_card {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 #card-container {
@@ -14,9 +14,47 @@
 }
 
 #destination-form {
-  width: 500px;
+  width: 250px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  margin-right: 100px;
+}
+
+.card {
+  margin: 10px;
+}
+
+.csect-title {
+  margin: 0px;
+}
+
+header {
+  margin-top: -25px;
+  margin-right: -25px;
+  margin-left: -50px;
+  margin-bottom: 25px;
+  height: 300px;
+  width: 100%;
+}
+
+.sbmt {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.frm_input {
+  width: 100%;
+  margin-top: -7px;
+}
+
+.txt_title {
+  margin-top: 5px;
+  margin-left: -2px;
+  text-align: left;
+}
+
+.img-size {
+  height: 250px;
+  width: 250px;
 }

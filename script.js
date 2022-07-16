@@ -16,7 +16,7 @@ function cardCreate(image, localeVal, destNameVal, descriptionVal) {
   var newDiv = document.createElement('div');
   newDiv.setAttribute('class', 'card');
   newDiv.innerHTML = `
-  <img src='${image}' class='card-img-top' alt ="vacation photo"/>
+  <img src='${image}' class='card-img-top img-size' alt ="vacation photo"/>
   <div class='card-body'>
     <h5 class='card-title'>${destNameVal}</h5>
     <h4 class='card-subtitle mb-2 text-muted'>${localeVal}</h4>
