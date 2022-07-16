@@ -1,16 +1,22 @@
-
-
 * {
   box-sizing: border-box;
   margin: 25px;
 }
 
-#form_card{
+#form_card {
   display: flex;
   flex-wrap: wrap;
 }
 
-#card-container{
-  display: flex; 
+#card-container {
+  display: flex;
   flex-wrap: wrap;
+}
+
+#destination-form {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
