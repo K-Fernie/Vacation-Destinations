@@ -60,8 +60,9 @@ function cardCreate(image, localeVal, destNameVal, descriptionVal) {
   document.querySelector('form').reset();
 }
 
-//Building the card based on photo value provided
-function cardBuild() {
+//Actions that occur on submit
+myForm.addEventListener('submit', e => {
+  e.preventDefault();
   const dNValue = destName.value;
   const locValue = locale.value;
   const photoVal = photo.value;
@@ -72,10 +73,4 @@ function cardBuild() {
   } else {
     cardCreate(defaultImage, locValue, dNValue, descValue);
   }
-}
-
-//Actions that occur on submit
-myForm.addEventListener('submit', e => {
-  e.preventDefault();
-  cardBuild();
 });
