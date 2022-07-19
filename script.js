@@ -59,8 +59,8 @@ function cardCreate(image, localeVal, destNameVal, descriptionVal) {
 
 function imageURL(locValue, dNValue, descValue) {
   let city = dNValue.replace(/\s+/g, '');
-  const accessKey = 'C6L_DP5y54cCQkGgwYtfcDq0gdm059TKAP3BZScVWek';
-  const URL = `https://api.unsplash.com/search/photos?query=${city}&client_id=${accessKey}`;
+  const ACCESS_KEY = 'C6L_DP5y54cCQkGgwYtfcDq0gdm059TKAP3BZScVWek';
+  const URL = `https://api.unsplash.com/search/photos?query=${city}&client_id=${ACCESS_KEY}`;
   fetch(URL)
     .then(res => res.json())
     .then(data => {
