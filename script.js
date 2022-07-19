@@ -1,5 +1,4 @@
 'use strict';
-
 //Setting Element Variables
 const destName = document.getElementById('dest-name');
 const locale = document.getElementById('location');
@@ -8,8 +7,6 @@ const description = document.getElementById('description');
 const cardContainer = document.getElementById('card-container');
 const myForm = document.getElementById('destination-form');
 const addBtn = document.getElementById('addBtn');
-const defaultImage =
-  'https://s3.amazonaws.com/ae-lane-report/wp-content/uploads/2020/04/21121102/GettyImages-1160947136-1.jpg';
 
 //Function for vacation card creation
 function cardCreate(image, localeVal, destNameVal, descriptionVal) {
@@ -60,17 +57,23 @@ function cardCreate(image, localeVal, destNameVal, descriptionVal) {
   document.querySelector('form').reset();
 }
 
+function imageURL(locValue, dNValue, descValue) {
+  let city = dNValue.replace(/\s+/g, '');
+  const accessKey = 'C6L_DP5y54cCQkGgwYtfcDq0gdm059TKAP3BZScVWek';
+  const URL = `https://api.unsplash.com/search/photos?query=${city}&client_id=${accessKey}`;
+  fetch(URL)
+    .then(res => res.json())
+    .then(data => {
+      //returns the regular image
+      cardCreate(data.results[0].urls.regular, locValue, dNValue, descValue);
+    });
+}
+
 //Actions that occur on submit
 myForm.addEventListener('submit', e => {
   e.preventDefault();
   const dNValue = destName.value;
   const locValue = locale.value;
-  const photoVal = photo.value;
   const descValue = description.value;
-
-  if (photoVal) {
-    cardCreate(photoVal, locValue, dNValue, descValue);
-  } else {
-    cardCreate(defaultImage, locValue, dNValue, descValue);
-  }
+  imageURL(locValue, dNValue, descValue);
 });
