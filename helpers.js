@@ -1,9 +1,12 @@
+import { delFunc } from './deleteCards.js';
+
 const photo = document.getElementById('photo');
 const cardContainer = document.getElementById('card-container');
 
-export function cardCreate(image, localeVal, destNameVal, descriptionVal) {
+export function cardCreate(image, localeVal, destNameVal, descriptionVal, id) {
   var newDiv = document.createElement('div');
   newDiv.setAttribute('class', 'card');
+  newDiv.setAttribute('card-id', id);
   newDiv.innerHTML = `
     <img src='${image}' class='card-img-top img-size' alt ="vacation photo"/>
     <div class='card-body'>
@@ -39,7 +42,7 @@ export function cardCreate(image, localeVal, destNameVal, descriptionVal) {
   newBtn2.innerText = 'Remove';
   newBtn2.addEventListener('click', () => {
     //remove button functionality
-    newBtn2.parentElement.remove();
+    delFunc(newDiv.getAttribute('card-id'));
   });
 
   newDiv.appendChild(newBtn1);
