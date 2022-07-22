@@ -1,18 +1,19 @@
-import { imageURL } from '../helpers';
-import { destName, locale, description } from '../script.js';
+import { imageURL } from '../helpers.js';
 
-export async function updateFunc(id) {
+export async function updateFunc(id, destName, locale, description) {
   const URL = 'https://destinations-api-kfernie.herokuapp.com/destinations';
-  const img = await imageURL(destName.value);
+  const img = await imageURL(destName);
   await fetch(URL, {
     method: 'put',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      _id: ObjectId(id),
-      destination: destName.value,
-      location: locale.value,
-      description: description.value,
-      photo: imageURL(destName.value),
+      _id: id,
+      destination: destName,
+      location: locale,
+      description: description,
+      photo: img,
     }),
+  }).then(response => {
+    window.location.reload(true);
   });
 }
