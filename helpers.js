@@ -1,4 +1,4 @@
-import { delFunc } from './deleteCards.js';
+import { delFunc } from './CRUD/deleteCards.js';
 
 const photo = document.getElementById('photo');
 const cardContainer = document.getElementById('card-container');

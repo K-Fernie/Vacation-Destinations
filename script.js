@@ -1,13 +1,13 @@
 'use strict';
 //Setting Element Variables
-const destName = document.getElementById('dest-name');
-const locale = document.getElementById('location');
-const description = document.getElementById('description');
-const myForm = document.getElementById('destination-form');
+export const destName = document.getElementById('dest-name');
+export const locale = document.getElementById('location');
+export const description = document.getElementById('description');
+export const myForm = document.getElementById('destination-form');
 
 import { cardCreate, imageURL } from './helpers.js';
-import { initialGet } from './getCards.js';
-import { submitFunc } from './postCards.js';
+import { initialGet } from './CRUD/getCards.js';
+import { submitFunc } from './CRUD/postCards.js';
 //Function for vacation card creation
 
 initialGet();

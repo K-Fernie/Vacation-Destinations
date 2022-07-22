@@ -1,4 +1,4 @@
-import { cardCreate } from './helpers.js';
+import { cardCreate } from '../helpers.js';
 
 export function initialGet() {
   const serverURL = 'https://destinations-api-kfernie.herokuapp.com/';

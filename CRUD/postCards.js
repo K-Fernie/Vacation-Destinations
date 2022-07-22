@@ -1,4 +1,4 @@
-import { imageURL } from './helpers.js';
+import { imageURL } from '../helpers.js';
 
 const destName = document.getElementById('dest-name');
 const locale = document.getElementById('location');
