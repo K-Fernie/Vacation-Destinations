@@ -23,7 +23,7 @@
       </h3>
     </header>
     <section id="form_card">
-      <form id="destination-form">
+      <form action="/destinations" method="post" id="destination-form">
         <p class="txt_title">Destination Name</p>
         <input
           id="dest-name"
@@ -40,20 +40,14 @@
           placeholder="Where is it located?"
           required
         />
-        <!-- <p class="txt_title">Photo</p>
-        <input
-          id="photo"
-          class="frm_input"
-          type="text"
-          placeholder="Enter an image url of the place"
-        /> -->
         <p class="txt_title">Description</p>
-        <input
+        <textarea
           id="description"
           class="frm_input"
-          type="text"
+          cols="30"
+          rows="10"
           placeholder="What's it like?"
-        />
+        ></textarea>
         <input class="btn btn-primary sbmt" type="submit" />
       </form>
       <section id="card-section">
