@@ -58,12 +58,13 @@ export async function imageURL(dNValue) {
   let returnval;
   const ACCESS_KEY = 'C6L_DP5y54cCQkGgwYtfcDq0gdm059TKAP3BZScVWek';
   const URL = `https://api.unsplash.com/search/photos?query=${city}&client_id=${ACCESS_KEY}`;
-  await fetch(URL)
-    .then(res => res.json())
-    .then(data => {
-      //returns the regular image
-      console.log(data.results[0].urls.regular);
-      returnval = data.results[0].urls.regular;
-    });
+
+  try {
+    const res = await fetch(URL);
+    const data = await res.json();
+    returnval = data.results[0].urls.regular;
+  } catch (error) {
+    console.log(error);
+  }
   return returnval;
 }
