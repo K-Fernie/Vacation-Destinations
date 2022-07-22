@@ -62,7 +62,8 @@ export async function imageURL(dNValue) {
   try {
     const res = await fetch(URL);
     const data = await res.json();
-    returnval = data.results[0].urls.regular;
+    const rand = Math.floor(Math.random() * data.results.length);
+    returnval = data.results[rand].urls.regular;
   } catch (error) {
     console.log(error);
   }
